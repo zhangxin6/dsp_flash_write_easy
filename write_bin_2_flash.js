@@ -4,8 +4,8 @@ importPackage(Packages.com.ti.ccstudio.scripting.environment)
 importPackage(Packages.java.lang)
 
 // Configurable Parameters
-var deviceCCXMLFile = "D:/image_process_unit/flash_write_easy/0507_App_Load/NewTargetConfiguration.ccxml";
-var programToLoad = "D:/image_process_unit/flash_write_easy/0507_App_Load/Debug/0507_App_Load.out";
+var deviceCCXMLFile = "C:/Users/zhang/dsp_flash_write_easy/0507_App_Load/NewTargetConfiguration.ccxml";
+var programToLoad = "C:/Users/zhang/dsp_flash_write_easy/0507_App_Load/Debug/0507_App_Load.out";
 
 // Create our scripting environment object - which is the main entry point into any script and
 // the factory for creating other Scriptable ervers and Sessions
@@ -31,7 +31,7 @@ var breakpoint1 = debugSession.breakpoint.add("main.c",125);
 // Run the program
 debugSession.target.run();
 
-debugSession.memory.loadRaw(0,0x80000000,"D:/image_process_unit/flash_write_easy/out_2_bin/helloworld.bin",32,false);
+debugSession.memory.loadRaw(0,0x80000000,"C:/Users/zhang/dsp_flash_write_easy/helloworld.bin",32,false);
 
 var breakpoint2 = debugSession.breakpoint.add("main.c",230);
 
