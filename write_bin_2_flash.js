@@ -33,11 +33,11 @@ debugSession.target.run();
 
 debugSession.memory.loadRaw(0,0x80000000,"C:/Users/zhang/dsp_flash_write_easy/helloworld.bin",32,false);
 
-var breakpoint2 = debugSession.breakpoint.add("main.c",230);
+var breakpoint2 = debugSession.breakpoint.add("main.c",167);
 
 debugSession.target.run();
 // Disconnect from the target
 debugSession.target.disconnect();
 
-debugSession.terminate();
-debugServer.stop();
+//debugSession.terminate();
+//debugServer.stop();
